@@ -19,3 +19,10 @@ WHEN all questions are answered or the timer reaches 0
 THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
+
+## Screenshots of Application
+<img src="./assets/images/2022-10-25_00-31-21.png">
+<img src="./assets/images/2022-10-25_00-31-40.png">
+
+## Link to Deployed Application
+https://mosidow.github.io/Code-Quiz/
