@@ -1,0 +1,92 @@
+body {
+    background-image: url(..//assets/images/R.jfif)
+}
+
+#box {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    width: 600px;
+    height: 450px;
+    border: 5px solid blue;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#link{
+text-decoration: none;
+font-weight: bolder;
+color: black;
+font-size: 25px;
+}
+
+#link:hover {
+    color: grey;
+}
+
+
+#startQuiz {
+    background-color: blue;
+    padding: 10px 30px;
+    margin-left: 40%;
+    font-size: 15px;
+    color: turquoise;
+}
+
+#startQuiz:hover {
+    background-color: aqua;
+    color: black;
+}
+
+#questions {
+    margin: 50px;
+}
+
+#currentTime {
+    float: right;
+}
+
+#back {
+    background-color: blue;
+    position: relative;
+    padding: 15px;
+    font-size: 15px;
+    color: turquoise;
+    top: 30%;
+    left: 55%;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+#back:hover {
+    background-color: aqua;
+    color: black;
+}
+
+
+#clear {
+    background-color: blue;
+    position: relative;
+    padding: 15px;
+    font-size: 15px;
+    color: turquoise;
+    top: 30%;
+    right: 5%;
+    text-align: center;
+}
+
+#clear:hover {
+    background-color: aqua;
+    color: black;
+}
+
+button {
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
