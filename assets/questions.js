@@ -33,3 +33,17 @@ var questions = [
     answer: 'console.log',
   },
 ];
+
+var score= 0;
+var questionsN= 0;
+
+
+var currentTime = document.querySelector("#currentTime");
+var questions = document.querySelector("#questions");
+var startQuizTimer= document.querySelector("#startQuizTimer");
+var box = document.querySelector("#box");
+
+var remainingTime = 60;
+var holdTime = 0;
+var timeLost = 6;
+var createList = document.createElement("ul")
