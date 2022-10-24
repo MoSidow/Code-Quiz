@@ -34,21 +34,23 @@ var questions = [
   },
 ];
 
+// var for score and question
 var score= 0;
 var questionsN= 0;
 
-
+// select var by id
 var currentTime = document.querySelector("#currentTime");
 var questionsD = document.querySelector("#questionsD");
 var startQuizTimer= document.querySelector("#startQuizTimer");
 var box = document.querySelector("#box");
 
+// Time given 
 var remainingTime = 60;
 var holdTime = 0;
 var timeLost = 6;
 var createList = document.createElement("ul")
 
-
+// when button is clicked, timer starts
 startQuizTimer.addEventListener("click", function () {
   if(holdTime === 0) {
     holdTime = setInterval(function () {
@@ -65,7 +67,7 @@ startQuizTimer.addEventListener("click", function () {
   render(questionsN);
 });
 
-
+// renders question and answer on page
 function render(questionsN) {
   questionsD.innerHTML = "";
   createList.innerHTML = "";
@@ -84,7 +86,7 @@ function render(questionsN) {
   })
 }
 
-
+// check answer and compares with question
 function compare(event) {
   var element = event.target;
 
@@ -103,7 +105,7 @@ function compare(event) {
           createDiv.textContent = "Wrong! The correct answer is:  " + questions[questionsN].answer;
       }
   }
-
+// checks which question player is on
   questionsN++;
 
   if (questionsN >= questions.length) {
@@ -117,6 +119,7 @@ function compare(event) {
 
 }
 
+// appends when quiz is finished
   function allDone() {
     questionsD.innerHTML = "";
     currentTime.innerHTML = "";
@@ -137,7 +140,7 @@ function compare(event) {
     if (remainingTime >= 0) {
         var timeRemaining = remainingTime;
         var createP2 = document.createElement("p");
-        clearInterval(holdInterval);
+        clearInterval(holdTime);
         createP.textContent = "Your score is: " + timeRemaining;
 
         questionsD.appendChild(createP2);
@@ -166,7 +169,7 @@ function compare(event) {
 
     questionsD.appendChild(createSubmit);
   
-
+// event listener for initials and storage of scores
     createSubmit.addEventListener("click", function () {
       var initials = createInput.value;
 
@@ -190,7 +193,7 @@ function compare(event) {
           var newScore = JSON.stringify(allScores);
           localStorage.setItem("allScores", newScore);
           
-          window.location.replace("./HighScores.html");
+          window.location.replace("./highscore.html");
       }
   });
 

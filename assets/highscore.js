@@ -2,7 +2,7 @@ var Highscores = document.querySelector("#Highscores");
 var clear = document.querySelector("#clear");
 var back = document.querySelector("#back");
 
-
+// When clear is clicked, page is reloaded and local storage is creared
 clear.addEventListener("click", function () {
     localStorage.clear();
     location.reload();
@@ -20,6 +20,7 @@ if (allScores !== null) {
         Highscores.appendChild(createLi);
 
     }
+// back button
 }
 back.addEventListener("click", function () {
     window.location.replace("./index.html");
